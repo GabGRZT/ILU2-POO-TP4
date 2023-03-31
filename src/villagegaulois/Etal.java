@@ -11,8 +11,8 @@ public class Etal <P extends Produit> implements IEtal{
 	
 	public void installerVendeur(Gaulois vendeur, P[] produit, int prix){
 		this.vendeur = vendeur;
-		this.produits = produits;
-		this.prixProduit = prixProduit;
+		this.produits = produit;
+		this.prixProduit= prix;
 	}
 	
 	@Override
@@ -31,7 +31,7 @@ public class Etal <P extends Produit> implements IEtal{
 	public double acheterProduit(int quantiteSouhaite) {
 		double prixPaye = 0;
 		for (int i = nbProduit - 1; i > nbProduit - quantiteSouhaite - 1 || i > 1; i--) {
-//		prixPaye += produits[i].calculerPrix(prix);
+//		prixPaye += produits[i].calculerPrix(prixProduit);
 		}
 		if (nbProduit >= quantiteSouhaite) {
 		nbProduit -= quantiteSouhaite;
@@ -58,5 +58,21 @@ public class Etal <P extends Produit> implements IEtal{
 	
 	public void acheterProduit () {
 		
+	}
+	
+	public void calculerPrix(int prix) {
+		
+	}
+
+	@Override
+	public Gaulois getVendeur() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public double donnerPrix() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }

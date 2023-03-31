@@ -10,5 +10,4 @@ public interface IEtal {
 	int contientProduit(String produit, int quantiteSouhaitee);
 	double acheterProduit(int quantiteSouhaitee);
 	String etatEtal();
-	void installerVendeur(String string, Etal<Sanglier> etalSanglier, int i);
 }

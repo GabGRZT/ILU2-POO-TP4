@@ -10,11 +10,13 @@ public class ScenarioTest {
 	public static void main(String[] args) {
 //		IEtal<Sanglier>[] marcheSanglier = new IEtal[3];//Essai 2 : on ne peut pas construire
 //		IEtal<Poisson>[] marchePoisson = new IEtal[3];//Essai 2 : on ne peut pas construire 
-		Etal[] etals = new Etal[3];
+		Etal[] marche = new Etal[3];
 		Etal<Sanglier> etalSanglier = new Etal<>();
 		Etal<Poisson> etalPoisson = new Etal<>();
-		etals[0] = etalSanglier;
-		etals[1] = etalPoisson;
+		marche[0] = etalSanglier;
+		marche[1] = etalSanglier;
+		marche[2] = etalPoisson;
+		
 		
 		Gaulois ordralfabetix = new Gaulois("Ordralfabétix",9);
 		Gaulois obelix = new Gaulois("Obélix",20);
@@ -28,12 +30,14 @@ public class ScenarioTest {
 		Sanglier[] sangliersObelix = {sanglier1, sanglier2};
 		Sanglier[] sangliersAsterix = {sanglier3, sanglier4};
 		
-		Poisson poisson1 = new Poisson(2, "lundi");
+		Poisson poisson1 = new Poisson("lundi");
 		Poisson[] poissons = {poisson1};
 		
-		etals[0].installerVendeur(obelix, sangliersObelix, 8);
-		etals[0].installerVendeur(asterix, sangliersAsterix, 10);
-		etals[0].installerVendeur(ordralfabetix, poissons, 7);
+		marche[0].installerVendeur(obelix, sangliersObelix, 8);
+		marche[1].installerVendeur(asterix, sangliersAsterix, 10);
+		marche[2].installerVendeur(ordralfabetix, poissons, 7);
+		
+		
 	}
 	
 }
